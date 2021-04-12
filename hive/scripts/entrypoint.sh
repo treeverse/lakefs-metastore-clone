@@ -8,4 +8,4 @@ if [[ -n "${S3A_ENDPOINT}" ]]; then
   HIVE_OPTS="--hiveconf fs.s3a.endpoint=${S3A_ENDPOINT}"
 fi
 echo "hive options: ${S3A_ENDPOINT}"
-hive --service metastore "$HIVE_OPTS"
+hive --service metastore $HIVE_OPTS
