@@ -1,0 +1,8 @@
+metastore:
+  type: glue
+  glue:
+    catalog_id: <YOUR-CATALOG-ID>
+    credentials:
+      access_key_id: <YOUR-AWS-ACCESS-KEY>
+      access_secret_key: <YOUR-AWS-SECRET-KEY>
+    region: <YOUR-AWS-GLUE-REGION>
