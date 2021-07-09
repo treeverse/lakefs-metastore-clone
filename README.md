@@ -43,7 +43,7 @@ $ ./clone.sh  9084 example_branch
 For filtering schemas starting with "s" and tables starting with "a" run:
 
 ```sh
-$ ./clone.sh  9084 example_branch "s.*" "a.*"
+$ ./clone.sh 9084 example_branch "s.*" "a.*"
 ```
 
 The Metastore for the requested branch is available on port `9084` for all interfaces.
@@ -52,9 +52,9 @@ The Metastore for the requested branch is available on port `9084` for all inter
 ### Running the import script
 
 In case our tables in the source Metastore do not exist in lakeFS
-to create a new Hive Metastore with tables from our source Metastore with locations in lakeFS
+we should use the import script `import.sh`.
+The import script transforms the table location from an external location to a lakeFS location.
 e.g table with location s3://my-bucket/path/to/table will be imported to the destination metastore with location s3://my-repo/my-branch/path/to/table
-we should run the script `import.sh`.
 
 `import.sh` should receive the following arguments
 - port to export for new Hive Metastore
@@ -66,10 +66,10 @@ we should run the script `import.sh`.
 For example, in order to get a copy of all schemas and tables (directed to example_repo/example_branch) from glue to new hive metastore on port 9084 run:
 
 ```sh
-$ ./import.sh  9084 example_repo example_branch 
+$ ./import.sh 9084 example_repo example_branch 
 ```
 
-For filtering schemas starting with "s" and tables starting with "a" run:
+For example, filtering schemas starting with "s" and tables starting with "a" run:
 
 ```sh
 $ ./import.sh 9084 example_repo example_branch "s.*" "a.*"
