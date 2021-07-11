@@ -12,7 +12,7 @@ This repository contains
 
 ### Prerequisite
 
-export your lakeFS endpoint and AWS credentials 
+export your lakeFS endpoint and lakeFS credentials 
 
 ```sh
 $ export S3A_ENDPOINT=s3.my.lakefs.com
