@@ -19,7 +19,7 @@ services:
     depends_on:
       - mariadb
   lakectl:
-    image: treeverse/lakectl:metastore3
+    image: treeverse/lakectl:metastore4
     volumes:
       - ./lakectl.yaml:/home/lakefs/.lakectl.yaml
 
